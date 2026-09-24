@@ -1,0 +1,25 @@
+---
+title: Evidence over vibes
+---
+
+Agent-authored code failed a quiet test long before it failed CI: we started trusting narration. A model explains a patch eloquently, opens a pull request, and the review becomes a reading comprehension exercise. The missing artifact is not another summary. It is a **receipt**.
+
+## What a receipt is
+
+A useful receipt answers questions that prose ducks:
+
+- Did the project still build?
+- Did types, lints, and formatters agree with the story?
+- Did public APIs drift?
+- Did smoke tests run, and what did they observe?
+- Which dependencies changed, and was that change justified by the diff?
+
+[Aftermath](/projects/aftermath) exists because those questions should not depend on the agent’s self-esteem. Verification has to be independent, re-runnable, and durable enough to outlive the chat that produced the change.
+
+## Why independence matters
+
+If the same system that wrote the code also grades the code, you have theater. The interesting architecture is a second plane: something that examines artifacts after the fact and is allowed to disagree. That disagreement is the product.
+
+## A bias worth keeping
+
+Ship tools that make “show me” cheaper than “trust me.” Fluency is abundant. Evidence is not.

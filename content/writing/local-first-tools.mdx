@@ -1,0 +1,17 @@
+---
+title: Local-first tools for people who live in repos
+---
+
+A large share of modern developer tooling assumes the repository is happiest in someone else’s cluster. That assumption is fine for search demos. It is worse for architecture navigation, blast-radius analysis, and agent context that needs to stay close to the files you are actually editing.
+
+## What local-first buys you
+
+- **Privacy by default.** Analysis does not require shipping the tree to a SaaS index.
+- **Latency that matches editing.** Orientation should feel like part of the editor, not a round trip.
+- **Honesty about boundaries.** Local tools are forced to work with what is on disk — which is usually the truth that matters.
+
+[Cartographer](/projects/cartographer) and [Arcframe](/projects/arcframe) are built with that bias. They are not anti-cloud. They are anti-outsourcing the map of your own code.
+
+## Agents make this sharper
+
+Coding agents amplify bad context. If the only map an agent has is a remote summary or a lucky grep, it will invent structure. Local graph and evidence layers shrink that invention surface.

@@ -1,0 +1,30 @@
+# Proprietary License
+
+Copyright (c) 2026 theworker02 (Matthew Looney). All rights reserved.
+
+This software and its associated documentation files (the "Software") are the
+proprietary and confidential property of the copyright holder.
+
+## Rights reserved
+
+You may not copy, modify, merge, publish, distribute, sublicense, reverse
+engineer, decompile, disassemble, scrape for competitive reuse, or sell copies
+of the Software, or permit others to do so, except:
+
+1. As expressly authorized in writing by the copyright holder; or
+2. Under a negotiated acquisition / sale / customization agreement
+   (see [ACQUISITION.md](./ACQUISITION.md)).
+
+Viewing the public website and interacting with published APIs for personal,
+non-commercial exploration is permitted. Automated harvesting of content,
+design systems, or source maps for republication or derivative commercial
+products is not.
+
+## No warranty
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND.
+
+## Contact
+
+Acquisition / licensing: matthewlooney5@gmail.com  
+Security: matthewlooney5@gmail.com with subject prefix `[SECURITY]`
