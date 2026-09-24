@@ -6,6 +6,8 @@
   NODE_VERSION = "22"
   # Fail closed if someone accidentally enables browser source maps in CI.
   NEXT_TELEMETRY_DISABLED = "1"
+  # These are public/config values, not secrets — Netlify marks them secret if set in UI.
+  SECRETS_SCAN_OMIT_KEYS = "NEXT_PUBLIC_SITE_URL,GITHUB_EXCLUDE_REPOS"
 
 [[plugins]]
   package = "@netlify/plugin-nextjs"

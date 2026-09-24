@@ -57,7 +57,9 @@ export async function readJsonLimited(
  * Locally, allow without secret for developer convenience.
  */
 export function authorizeGithubSync(request: Request): NextResponse | null {
-  const secret = process.env.GITHUB_SYNC_SECRET?.trim();
+  const secret =
+    process.env.GITHUB_SYNC_SECRET?.trim() ||
+    process.env.SYNC_TOKEN_SECRET?.trim();
   const provided =
     request.headers.get("x-sync-secret")?.trim() ||
     new URL(request.url).searchParams.get("secret")?.trim() ||
@@ -66,7 +68,10 @@ export function authorizeGithubSync(request: Request): NextResponse | null {
   if (isProduction()) {
     if (!secret) {
       return NextResponse.json(
-        { ok: false, error: "Sync locked: GITHUB_SYNC_SECRET is not configured." },
+        {
+          ok: false,
+          error: "Sync locked: set GITHUB_SYNC_SECRET (or SYNC_TOKEN_SECRET) in the environment.",
+        },
         { status: 503 },
       );
     }
