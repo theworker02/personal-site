@@ -4,6 +4,7 @@ import { promises as fs } from "fs";
 import path from "path";
 import { clientIp, readJsonLimited, jsonError } from "@/lib/security/request";
 import { pruneRateLimits, rateLimit } from "@/lib/security/rate-limit";
+import { webhookPayload } from "@/lib/security/contact-delivery";
 
 export const runtime = "nodejs";
 
@@ -55,10 +56,11 @@ export async function POST(request: Request) {
 
   if (process.env.CONTACT_WEBHOOK_URL) {
     try {
-      const res = await fetch(process.env.CONTACT_WEBHOOK_URL, {
+      const webhookUrl = process.env.CONTACT_WEBHOOK_URL;
+      const res = await fetch(webhookUrl, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(record),
+        body: JSON.stringify(webhookPayload(webhookUrl, record)),
         signal: AbortSignal.timeout(8_000),
       });
       if (!res.ok) {

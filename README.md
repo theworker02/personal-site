@@ -48,7 +48,7 @@ See `.env.example`:
 - `NEXT_PUBLIC_SITE_URL` — canonical URL
 - `GITHUB_TOKEN` — optional, higher GitHub rate limits
 - `GITHUB_EXCLUDE_REPOS` — comma-separated repo names to hide
-- `CONTACT_WEBHOOK_URL` — optional delivery target for contact form
+- `CONTACT_WEBHOOK_URL` — optional delivery target for contact form (Slack Incoming Webhook supported)
 - `GITHUB_SYNC_SECRET` — optional auth for `POST /api/github/sync`
 
 Without `CONTACT_WEBHOOK_URL`, contact submissions append to `data/cache/contact-log.jsonl` (gitignored).
