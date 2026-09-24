@@ -1,24 +1,27 @@
 # Changelog
 
-## Unreleased
+## 0.1.0 — 2026-09-24
 
-- Security hardening: CSP/HSTS/COOP headers, middleware probe blocking, API rate limits, production sync secret lock, no source maps, proprietary LICENSE
-- Mobile optimization: viewport/safe-area, touch targets, sticky/parallax disabled on small screens, mobile nav Search, command palette sheet
-- Added [CODEX.md](./CODEX.md) and [AGENTS.override.md](./AGENTS.override.md) for Codex project instructions
-- Expanded [DESIGN_SYSTEM.md](./DESIGN_SYSTEM.md) into the full graphite editorial design system
-- Documented site-level **acquisition / for sale / customizable** terms ([ACQUISITION.md](./ACQUISITION.md))
-- Documented production **Netlify** deployment across project docs
+First public semantic release of the **theworker02** technology laboratory site.
 
-## 0.1.0 — Phase 1
+### Added
 
-- Next.js App Router laboratory site
-- Project constellation homepage
-- Curated project case studies + interactive demos
-- Research notebook, lab, writing (MDX), archive, timeline, knowledge graph
-- Command palette + deterministic search
-- GitHub server sync + cache
-- Acquisition and contact flows
-- Stats derived from real metadata
-- Vitest schema/search tests
-- Architecture and design documentation
-- Production deploy on **Netlify** (`@netlify/plugin-nextjs`)
+- Next.js App Router laboratory (not a portfolio template): homepage acts, projects, research, lab, writing (MDX), archive, timeline, knowledge graph
+- Graphite editorial design system (worlds, type, Field, marks) with design-lab routes
+- Motion system with mobile-safe sticky/parallax behavior
+- Command palette + Fuse deterministic search
+- GitHub server sync + JSON cache
+- Acquisition and contact flows (Slack Incoming Webhook delivery)
+- Security hardening: CSP/HSTS/COOP, middleware probe blocking, API rate limits, production sync secret lock, no source maps, proprietary LICENSE
+- Mobile optimization: viewport/safe-area, touch targets, nav Search, command palette sheet
+- Docs: README, CODEX, ACQUISITION, ARCHITECTURE, DESIGN_SYSTEM, DESIGN_REFERENCE, PERFORMANCE, CONTENT_GUIDE, SECURITY, CONTRIBUTING
+
+### Deploy
+
+- Production on **Netlify** (`@netlify/plugin-nextjs`)
+- Secrets-scan omit for public config keys; `SYNC_TOKEN_SECRET` alias for sync lock
+
+### Fixed
+
+- Netlify `npm install` peer conflict (`@vitejs/plugin-react` vs Vitest/Vite)
+- Netlify secrets scanning false positives on `NEXT_PUBLIC_SITE_URL` / `GITHUB_EXCLUDE_REPOS`
