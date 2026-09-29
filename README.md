@@ -1,3 +1,23 @@
+<p align="center">
+  <img src="docs/logo.svg" alt="personal-site official logo" width="128" height="128">
+</p>
+
+<p align="center">
+  <a href="https://theworker02.github.io/personal-site/"><img src="https://img.shields.io/badge/docs-live-0B1F33?style=for-the-badge&labelColor=C9A227" alt="Docs"></a>
+  <a href="https://github.com/theworker02/personal-site/releases/tag/v1.0.0"><img src="https://img.shields.io/badge/release-v1.0.0-success?style=for-the-badge" alt="Release"></a>
+  <a href="https://github.com/theworker02/personal-site/blob/main/LICENSE"><img src="https://img.shields.io/badge/license-see%20LICENSE-blue?style=for-the-badge" alt="License"></a>
+  <a href="https://github.com/theworker02/personal-site"><img src="https://img.shields.io/badge/status-maintained-informational?style=for-the-badge" alt="Status"></a>
+</p>
+
+<p align="center">
+  <img src="https://img.shields.io/badge/version-1.0.0-0B1F33.svg" alt="version">
+  <img src="https://img.shields.io/badge/category-product-C9A227.svg" alt="category">
+  <img src="https://img.shields.io/badge/pages-enabled-222.svg" alt="pages">
+  <img src="https://img.shields.io/badge/docs-thickened-brightgreen.svg" alt="docs">
+  <img src="https://img.shields.io/badge/notes-detailed-lightgrey.svg" alt="notes">
+</p>
+
+
 # theworker02 — Technology Laboratory
 
 Interactive digital identity for **theworker02**: a personal technology laboratory, research archive, project museum, and knowledge graph — **not** a conventional developer portfolio template.
@@ -98,3 +118,16 @@ This site **is deployed with Netlify**. Config: `netlify.toml` + `@netlify/plugi
 ## Command palette
 
 `Ctrl/Cmd+K` opens global search + navigation actions.
+
+## Badges & release notes
+
+| Badge | Meaning |
+| --- | --- |
+| docs live | Public documentation / Pages surface for `personal-site` |
+| release v1.0.0 | Stable tagged release with narrative notes |
+| license | See repository `LICENSE` for terms |
+| status maintained | Actively kept in the @theworker02 portfolio |
+| version 1.0.0 | Documentation and brand completeness milestone |
+| pages enabled | Site intended at `https://theworker02.github.io/personal-site/` |
+
+Detailed narrative for the stable line lives in [CHANGELOG.md](./CHANGELOG.md) and the [v1.0.0 GitHub Release](https://github.com/theworker02/personal-site/releases/tag/v1.0.0).
